@@ -1,0 +1,22 @@
+<body>
+    <div class = "subjecTable">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Student Name</th>
+                    <th>Enrolled Subject</th>
+                    <th>Subject Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let detail of details$ | async">
+                    <td> {{ detail.studentId }} </td>
+                    <td> {{ detail.studentName }} </td>
+                    <td> {{ detail.subjectName }} </td>
+                    <td> {{ detail.subjectId }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>

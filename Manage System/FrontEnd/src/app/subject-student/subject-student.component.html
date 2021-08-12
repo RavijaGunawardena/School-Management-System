@@ -1,0 +1,16 @@
+<!-- <mat-toolbar color="primary">Welcome {{getStringName}} <br> Student Id - {{ getId }}</mat-toolbar> -->
+
+<body  class="inventory-body">
+   <h2 class="studentDetails">Welcome {{getStringName}} <br> Student Id - {{ getId }}</h2> 
+<div class = "h1Class">
+    <!-- <h1 style="margin-top: 30px; margin-left: 50px; font-size: 35px; font-family: sans-serif;">Welcome {{getStringName}}</h1> -->
+</div>
+
+<div class = "container">
+<label  *ngFor="let unit of checkBoxesValues">
+    <input input [(ngModel)]="unit.isSelected" (change)="checkCheckBoxvalue($event)" type="checkbox" name="subj" value ="{{unit.value}}" />
+    <span class="label-text">{{unit.value}}</span>
+</label>
+</div> 
+    <!-- <input [(ngModel)]="unit.isSelected" (change)="checkCheckBoxvalue($event)" type="checkbox" name="subj" value ="{{unit.value}}" class="{{unit.value}}">{{unit.value}}<br> -->
+</body>  
